@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>macOStool工作室</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script lang="javascript">
+		function goStore(){
+			var jsSrc =(navigator.language || navigator.browserLanguage).toLowerCase();
+			      if(jsSrc.indexOf('zh')>=0)
+			      {
+					window.location.href="https://apps.apple.com/cn/app/dockclockshow/id1611169226";
+			      }
+			      else
+			      {
+			        window.location.href="https://apps.apple.com/us/app/dockclockshow/id1611169226";
+			      }
+		}
+		</script>
+		<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+		    <script>
+		        $(document).ready(function () {
+		            $("#nav").load("nav.html");
+		            //$("#footer").load("footer.html");
+		            var d = new Date();
+		            $("#copyright")[0].innerHTML = "Copyright © "+d.getFullYear()+" macOStool All Rights Reserved. <br/>E-mail:macostool@qq.com";
+		        });
+		</script> 
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper style1">
+
+					<!-- Nav -->
+						<nav id="nav">
+						</nav>
+						
+						<!-- Logo -->
+							<div id="logo">
+								<p class="style2">
+								<img src="images/dockclockicon.png" width="128px"/>
+								<h1><br />Dock时钟</h1>
+								<br />
+								<a href="javascript:;" onclick="goStore();" target="_blank">
+									<img src="images/downicon.svg" type="image/svg+xml"/>	
+								</a>
+							</div>
+				</section>
+
+			  <!-- Intro -->
+				<section id="intro" class="wrapper style1">
+				  <div class="title"><p class="style1">功能介绍</p></div>
+				  <div class="container">
+					<p class="style1"><strong>显示在Dock程序坞上的时钟</strong></p>
+					<img src="images/dockclock.png" />
+					<p class="style1">
+						<p>这是一款可以显示在Dock程序坞上的时钟</p>
+						<p>它拥有极低的CPU使用率</p>
+						<p>我们提供了很多很多的显示样式，有经典闹钟、卡通图案、星球、运动球类等等...</p>
+						<p>另外还特别制作了树屋样式、南瓜灯、可爱的猫咪和爱心表盘样式，总有一个你会喜欢</p>
+						<p>更多表盘样式持续上线中...</p>
+						<p>如果您实在找不到喜欢的样式...我们提供自定义样式的功能</p>
+						<p>你可以把自己家人照片，或自己喜欢的图案作为表盘，放到Dock上显示</p>
+						<p>时钟的指针还支持机械走针和石英钟走针两种方式，任你挑选</p>
+						<p>如果你那里正处于夏令时，没问题的</p>
+						
+					  <p>以下为大家提供几个表盘背景(右键可保存原始尺寸)</p>
+					  <p>
+						  <img src="images/dial/1.png"  style="width: 10.00rem;"/>
+						  <img src="images/dial/2.png"  style="width: 10.00rem;"/>
+						  <img src="images/dial/3.png"  style="width: 10.00rem;"/>
+						  <img src="images/dial/4.png"  style="width: 10.00rem;"/>
+						  <img src="images/dial/5.png"  style="width: 10.00rem;"/>
+						  <img src="images/dial/6.png"  style="width: 10.00rem;"/>
+						  <img src="images/dial/7.png"  style="width: 10.00rem;"/>
+					  </p>
+					</p>
+				  </div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="container" align="center" id="copyright"></div>
+				</section> 
+		</div>
+<!-- Scripts 用于显示侧边菜单-->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
