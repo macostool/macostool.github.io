@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photo Gallery - Horizontal Table Layout</title> 
+<style>
+td {
+    word-wrap:break-word;word-break:break-all;
+	font-family: Arial;
+	font-size: 12px; 
+}
+body {
+    font-family: sans-serif;
+	overflow: hidden; 
+}
+a {
+    text-decoration: none;
+    color: #333; 
+}
+</style>
+<script>
+//取消默认的浏览器自带右键
+window.oncontextmenu = function(e){
+	e.preventDefault();
+}
+function disableDrag(element) {
+  element.draggable = false;
+}
+function goAppStore(id){
+	window.location.href="macappstores://apps.apple.com/%@/app/"+id+"?mt=12";
+}
+</script>
+</head>
+<body>
+	<table align="center">
+		
+			<tr>
+				<td>
+					<a href="#">
+					<img src="ad1.png" width="290" height="99%" onload="disableDrag(this)" onclick="goAppStore('id1582358382')">
+					</a>
+				</td>
+				
+				<td>
+					<a href="#">
+						<img src="ad2.png" width="290" height="99%" onload="disableDrag(this)" onclick="goAppStore('id1591346162')">
+					</a>
+				</td>
+				
+				<td>
+					<a href="#">
+						<img src="ad3.png" width="290" height="99%" onload="disableDrag(this)"  onclick="goAppStore('id6448700837')">
+					</a>
+				</td>
+			</tr>
+		
+		
+		<tr>
+			<td width="290" onclick="goAppStore('id1582358382')">
+				<a href="#">
+				4K 超清动态壁纸,请在App中搜索关键字: 4K.完美支持多个显示器,每日高清动态壁纸持续更新中…
+				</a>
+			</td>
+			
+			<td width="290" onclick="goAppStore('id1591346162')">
+				<a href="#">
+				桌面时钟,强大的自定义功能,完美支持多个显示器,你可以把它放到任何位置,支持圆形时钟和数字时钟显示.
+				</a>
+			</td>
+			
+			<td width="290" onclick="goAppStore('id6448700837')">
+				<a>
+				高效、省时的桌面文件助手,可以建立多个标签,文件映射到桌面显示,拖动文件到任何地方或应用程序打开它.
+				</a>
+			</td>
+		</tr>
+		
+	</table> 
+</body>
+</html>
