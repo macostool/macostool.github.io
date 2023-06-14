@@ -22,9 +22,6 @@ a {
 window.oncontextmenu = function(e){
 	e.preventDefault();
 }
-function disableDrag(element) {
-  element.draggable = false;
-}
 function goAppStore(id){
 	window.location.href="macappstores://apps.apple.com/%@/app/"+id+"?mt=12";
 }
@@ -36,19 +33,19 @@ function goAppStore(id){
 			<tr>
 				<td>
 					<a href="#">
-					<img src="ad1.png" width="290" height="99%" onload="disableDrag(this)" onclick="goAppStore('id1582358382')">
+					<img src="ad1.png" onclick="goAppStore('id1582358382')" draggable="false">
 					</a>
 				</td>
 				
 				<td>
 					<a href="#">
-						<img src="ad2.png" width="290" height="99%" onload="disableDrag(this)" onclick="goAppStore('id1591346162')">
+						<img src="ad2.png" onclick="goAppStore('id1591346162')" draggable="false">
 					</a>
 				</td>
-				
+		
 				<td>
 					<a href="#">
-						<img src="ad3.png" width="290" height="99%" onload="disableDrag(this)"  onclick="goAppStore('id6448700837')">
+						<img src="ad3.png" onclick="goAppStore('id6448700837')" draggable="false">
 					</a>
 				</td>
 			</tr>
