@@ -25,9 +25,31 @@ window.oncontextmenu = function(e){
 function goAppStore(id){
 	window.location.href="macappstores://apps.apple.com/%@/app/"+id+"?mt=12";
 }
+function changeInfo(){
+	var jsSrc =(navigator.language || navigator.browserLanguage).toLowerCase();
+	  if(jsSrc.indexOf('zh')>=0)
+	  {
+		document.getElementById("ad1").innerText = "4K 超清动态壁纸,请在App中搜索关键字: 4K.完美支持多个显示器,每日高清动态壁纸持续更新中…";
+		document.getElementById("ad2").innerText = "桌面时钟,强大的自定义功能,完美支持多个显示器,你可以把它放到任何位置,支持圆形时钟和数字时钟显示.";
+		document.getElementById("ad3").innerText = "高效、省时的桌面文件助手,可以建立多个标签,文件映射到桌面显示,拖动文件到任何地方或应用程序打开它.";
+	  }
+	  else if(jsSrc.indexOf('ja')>=0)
+	  {
+		var jsSrc =(navigator.language || navigator.browserLanguage).toLowerCase();
+		document.getElementById("ad1").innerText = "4K 超鮮明なライブ壁紙、アプリ内でキーワードを検索してください: 4K、複数のモニターを完全にサポート、毎日の高解像度ライブ壁紙は継続的に更新されます...";
+		document.getElementById("ad2").innerText = "デスクトップ時計、強力なカスタマイズ機能、複数のモニターを完全にサポート、どこにでも設置でき、円形時計とデジタル時計表示をサポートします。";
+		document.getElementById("ad3").innerText = "デスクトップ ファイル アシスタント。複数のラベルを作成し、ファイルをデスクトップ表示にマップし、ファイルを任意の場所にドラッグします。";
+	  }
+	  else
+	  {
+		document.getElementById("ad1").innerText = "4K ultra-clear live wallpaper,please search for keywords in the App: 4K. Perfect support for multiple monitors,daily high-definition live wallpaper is continuously updated...";
+		document.getElementById("ad2").innerText = "Desktop clock, powerful customization function, perfectly supports multiple monitors, you can put it anywhere, supports circular clock and digital clock display.";
+		document.getElementById("ad3").innerText = "Efficient and time-saving desktop file assistant, you can create multiple tabs, map files to the desktop display, drag files to any place or application to open it.";
+	  }
+}
 </script>
 </head>
-<body>
+<body onload="changeInfo()">
 	<table align="center">
 		
 			<tr>
@@ -50,22 +72,21 @@ function goAppStore(id){
 				</td>
 			</tr>
 		
-		
 		<tr>
-			<td width="290" onclick="goAppStore('id1582358382')">
-				<a href="#">
+			<td width="290" onclick="goAppStore('id1582358382')" align="top">
+				<a href="#" id="ad1">
 				4K 超清动态壁纸,请在App中搜索关键字: 4K.完美支持多个显示器,每日高清动态壁纸持续更新中…
 				</a>
 			</td>
 			
 			<td width="290" onclick="goAppStore('id1591346162')">
-				<a href="#">
+				<a href="#" id="ad2">
 				桌面时钟,强大的自定义功能,完美支持多个显示器,你可以把它放到任何位置,支持圆形时钟和数字时钟显示.
 				</a>
 			</td>
 			
 			<td width="290" onclick="goAppStore('id6448700837')">
-				<a>
+				<a href="#" id="ad3">
 				高效、省时的桌面文件助手,可以建立多个标签,文件映射到桌面显示,拖动文件到任何地方或应用程序打开它.
 				</a>
 			</td>
