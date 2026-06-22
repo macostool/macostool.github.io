@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title id="page-title">照片快速预览 - macOStool工作室</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.en-text { display: none; }
+			.feature-list { padding-left: 20px; }
+			.feature-list li { margin-bottom: 10px; }
+		</style>
+		<script>
+		function goStore(){
+			var jsSrc = (navigator.language || navigator.browserLanguage).toLowerCase();
+			if(jsSrc.indexOf('zh') >= 0) {
+				window.location.href="https://apps.apple.com/cn/app/photo-quick-preview/id6782760592";
+			} else {
+				window.location.href="https://apps.apple.com/us/app/photo-quick-preview/id6782760592";
+			}
+		}
+
+		document.addEventListener("DOMContentLoaded", function() {
+			var lang = (navigator.language || navigator.browserLanguage).toLowerCase();
+			var isEnglish = lang.indexOf('en') === 0;
+
+			if (isEnglish) {
+				document.title = "Photo Quick Preview - macOStool Studio";
+				var zhElements = document.querySelectorAll('.zh-text');
+				for (var i = 0; i < zhElements.length; i++) {
+					zhElements[i].style.display = 'none';
+				}
+				var enElements = document.querySelectorAll('.en-text');
+				for (var j = 0; j < enElements.length; j++) {
+					enElements[j].style.display = 'block';
+				}
+			}
+		});
+		</script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#nav").load("nav.html");
+				var d = new Date();
+				$("#copyright").html("Copyright © " + d.getFullYear() + " macOStool All Rights Reserved. <br/>E-mail:macostool@qq.com");
+			});
+		</script> 
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+			<section id="header" class="wrapper style1">
+				<nav id="nav"></nav>
+				<div id="logo">
+					<p class="style2">
+					<img src="images/pqp/icon_128x128@2x.png" width="128px" alt="Photo Quick Preview Icon" onerror="this.src='images/folderbar/icon_128x128@2x.png'"/>
+					</p>
+					<h1><br />Photo Quick Preview</h1>
+					<p class="zh-text">照片快速预览</p>
+					<p class="en-text">Photo Quick Preview</p>
+					<br />
+					<a href="javascript:;" onclick="goStore();" target="_blank">
+						<img src="images/downicon.svg" type="image/svg+xml"/>	
+					</a>
+				</div>
+			</section>
+
+			<section id="intro" class="wrapper style1">
+				<br/><br/>
+				<div class="title">
+					<p class="style1 zh-text">功能介绍</p>
+					<p class="style1 en-text">Features</p>
+				</div>
+				  
+				<div class="container zh-text" style="text-align: left; line-height: 1.8;">
+					<p style="max-width: 900px; margin: 0 auto; text-align: left;">
+						在这个信息爆炸的时代，处理海量图片不应再成为效率的瓶颈。<br/>
+						App专注于图片浏览和整理，解决的是一个简单的问题：如何更快速地查看和管理本地图片。<br/>
+						为了让操作尽可能直观，通过双栏布局，你可以通过底部的滑块随时调整图片大小，鼠标划过即可预览，无需反复点击打开。<br/>
+						希望能帮到同样追求高效的你。
+					</p>
+					<div align="center" style="margin: 2em 0;">
+						<img width="80%" style="max-width: 800px; border-radius: 8px;" src="images/pqp/c1.png" alt="界面预览" />
+					</div>
+
+					<ul class="feature-list">
+						<li><strong>快速预览：</strong>鼠标悬停显示图片，支持 GIF 动图播放。</li>
+						<li><strong>高效交互：</strong>键盘方向键即可移动光标，双击直接打开；支持反向拖拽，可以直接把图片拽到其他文件夹中。</li>
+						<li><strong>批量处理：</strong>支持多选进行删除、拷贝或显示信息，点选图片即可直接复制。</li>
+						<li><strong>便捷管理：</strong>提供名称、创建时间、大小等排序方式（支持正反序）。</li>
+						<li><strong>常规操作：</strong>右键菜单涵盖了打开、拷贝、删除和显示简介等基础功能。</li>
+					</ul>
+				</div>
+
+				<div class="container en-text" style="text-align: left; line-height: 1.8;">
+					<p>
+						In this era of information overload, managing a massive number of images shouldn't slow you down.<br/>
+						This app is designed to solve a simple problem: how to view and organize your local images as quickly as possible.<br/>
+						For an intuitive experience, I’ve used a dual-pane layout. You can adjust thumbnail sizes with the slider at the bottom, and preview images simply by hovering over them—no more endless clicking.<br/>
+						I hope this tool helps you stay efficient.
+					</p>
+
+					<div align="center" style="margin: 2em 0;">
+						<img width="80%" style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" src="images/pqp/c1.png" alt="Interface Preview" />
+					</div>
+
+					<ul class="feature-list">
+						<li><strong>Quick Preview:</strong> Preview images on hover; supports GIF playback.</li>
+						<li><strong>Efficient Interaction:</strong> Navigate with keyboard arrow keys, double-click to open, and drag-and-drop to other folders.</li>
+						<li><strong>Batch Processing:</strong> Multi-select to delete, copy, or get info. Copy images instantly with a single click.</li>
+						<li><strong>Simple Management:</strong> Sort by name, date created, or size (ascending/descending).</li>
+						<li><strong>Essential Operations:</strong> Right-click menu for quick access to Open, Copy, Delete, and Get Info.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="footer" class="wrapper">
+				<div class="container" align="center" id="copyright"></div>
+			</section> 
+		</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
